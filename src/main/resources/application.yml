@@ -1,0 +1,22 @@
+
+# Spring Boot incluent par défaut un serveur Web intégré préconfiguré, adresse et port du serveur  8080 par défaut.
+server.port: 9000
+
+logging.springframework.boot.web.embedded.tomcat: INFO
+
+spring:
+  # MySQL Configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/blockchain
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #jpa:
+    #hibernate:
+      # Generer ou mettre à jour automatiquement les tables de la base de données à partir des classes d'entites.
+      # create-drop:
+      # create: Crée le schema de BDD et detruit le prédécent
+      # none: Désactive DDL
+      # update: créer ou mets à jour le schéma de BDD si necessaire
+      # validate:
+      #ddl-auto: create
